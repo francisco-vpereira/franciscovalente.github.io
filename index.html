@@ -1,57 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt">
-
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Francisco Valente</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Francisco Valente</title>
 
+      <style>
+          /* Remove margens padrão e garante altura total */
+          body, html {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              width: 100%;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              overflow: hidden; /* Evita scrolls desnecessários */
+          }
 
-<body class="bg-white">
+          /* O segredo do gradiente com inclinação e paragem brusca */
+          .background {
+              height: 100vh;
+              width: 100vw;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(
+                  65deg, 
+                  #ffffff 0%, 
+                  #ffffff 45%, 
+                  #000000 45%, 
+                  #000000 100%
+              );
+          }
 
-  <!-- <div class="wrap">
-    <header class="site">
-     --<h1 class="site-title"><a href="index.html"><i>Cousadas</i></a></h1> -->
-	  <!--<p class="tagline">BREVE DESCRIÇÃO</p>-->
-      <!-- <nav class="site-nav">
-        <a href="index.html">Início</a>
-        <a href="artigos.html">Todos os Artigos</a>
-        <a href="about.html">Sobre</a>
-      </nav>
-	</header> --> 
+          /* Estilo da frase */
+          .text-container {
+              text-align: center;
+              z-index: 1;
+          }
 
-	<main>
+          h1 {
+              font-size: 3rem;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              /* Efeito de cor invertida: branco no fundo preto, preto no fundo branco */
+              /* background: linear-gradient(75deg, #000 35%, #fff 45%); */
+              color: rgb(129, 129, 129);
+              font-weight: 900;
+          }
 
-    <p>Website em construção.</p>
-		<!-- <h2>Últimos Artigos</h2>
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+          /* Responsividade para telemóveis */
+          @media (max-width: 600px) {
+              h1 { font-size: 1.5rem; }
+          }
+      </style>
+  </head>
+  <body>
 
+      <div class="background">
+          <div class="text-container">
+              <h1>Website coming soon</h1>
+          </div>
+      </div>
 
-		<h2 class="h2-title"><a href="blogroll.html">Links Comendatícios</a></h2>
-		<p> Conjunto de <i>links</i> que remetem para outros sites que considero interessantes. </p>
-
-
-		<h2 class="h2-title"><a href="palavras.html"><i>Como é que é ?</i></a></h2>
-		<p>Aqui apresento palavras e expressões populares caricatas com as quais me deparo no meu quotidiano. </p>
-
-		<h2 class="h2-title"><a href="recomendacoes.html">Consumíveis</a></h2>
-		<p>De livros, a filmes e séries, notícias, vídeos de YouTube, entre outros: eis um pouco daquilo que eu consumo nas minhas deambulações intelectuais.</p> -->
-
-   
-    </main>
-
-    <footer class="site">
-      <p>© <span id="ano"></span> NOME DO SITE</p>
-    </footer>
-
-  </div>
 
   <!-- JS externo -->
   <!-- <script src="artigos.js"></script> -->
   <script data-goatcounter="https://francisco2.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
+
+
+
