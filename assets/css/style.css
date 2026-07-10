@@ -1,0 +1,342 @@
+/* ==========================================================================
+   Estilo global — minimalista, leve (sem fontes externas, sem frameworks)
+   ========================================================================== */
+
+:root {
+  --bg: #faf9f6;
+  --ink: #1c1b18;
+  --muted: #75736c;
+  --accent: #3b4a6b;
+  --line: #e4e2da;
+
+  --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --max-width: 70%;
+  --gutter: 24px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* sublinhado de tinta, subtil, só no hover */
+.ink-link {
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.2s ease;
+  color: var(--ink);
+}
+.ink-link:hover,
+.ink-link:focus-visible {
+  background-size: 100% 1px;
+  color: var(--accent);
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ---------------------------------- header ---------------------------------- */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+
+.site-title2 img {
+  height: 1cm;  /* Ajusta os pixels (px) de acordo com o teu design */
+  width: 1cm;   /* Mantém a proporção correta da imagem sem distorcer */
+  display: block;
+  border-radius: 0%;
+}
+
+
+.site-title a { color: var(--ink); }
+
+.site-nav ul {
+  list-style:  none;
+  display: flex;
+  gap: 30px;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+.site-nav a {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.site-nav a[aria-current="page"],
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--ink);
+}
+
+/* ---------------------------------- main ---------------------------------- */
+
+main {
+  padding: 48px 0 80px;
+}
+
+.wrap > main,
+main.wrap { }
+
+.lede {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 100%;
+  margin: 20px 0 40px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin: 10px 0 24px;
+}
+
+/* ---------------------------------- artigos: grelha da home ---------------------------------- */
+
+.recent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 640px) {
+  .recent-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.recent-card figure {
+  margin: 0 0 12px;
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.recent-card figure a { display: block; height: 100%; }
+.recent-card img { width: 100%; height: 100%; object-fit: cover; }
+
+.recent-card h2 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 0 0 6px;
+}
+
+.recent-card time {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.recent-card p {
+  font-size: 15px;
+  color: var(--ink);
+  margin: 0;
+}
+
+.see-all {
+  margin-top: 44px;
+  font-size: 14px;
+}
+
+/* ---------------------------------- lista de artigos ---------------------------------- */
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+}
+
+.article-list .article-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 560px) {
+  .article-row { grid-template-columns: 1fr; gap: 14px; }
+}
+
+.article-row figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.article-row figure a { display: block; height: 100%; }
+.article-row img { width: 100%; height: 100%; object-fit: cover; }
+
+.article-row h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+.article-row time {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.article-row .summary {
+  font-size: 15px;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* ---------------------------------- página de artigo individual ---------------------------------- */
+
+.article-header {
+  margin-bottom: 32px;
+}
+
+.article-header h1 {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1.3;
+  margin: 0 0 10px;
+}
+
+.article-body p { margin: 0 0 20px; }
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* ---------------------------------- links ---------------------------------- */
+
+.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-list li {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.link-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.link-list .link-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+}
+
+.link-list .link-desc {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+/* ---------------------------------- about ---------------------------------- */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (max-width: 560px) {
+  .about-layout { grid-template-columns: 1fr; }
+}
+
+.about-photo {
+  border: 1px solid var(--line);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  margin: 20px auto 20px;
+}
+
+.about-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.about-text h1 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  margin: 20px 0 18px;
+}
+
+.about-text p { margin: 0 0 18px; }
+
+/* ---------------------------------- footer ---------------------------------- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 48px;
+}
+
+.site-footer .wrap {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ---------------------------------- acessibilidade ---------------------------------- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ink-link { transition: none; }
+}
