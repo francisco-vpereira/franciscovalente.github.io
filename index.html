@@ -1,84 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nome do Site</title>
-  <meta name="description" content="Site pessoal — artigos, links e notas.">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Francisco Valente</title>
 
-  <header class="site-header">
-    <div class="wrap">
-      <p class="site-title2"><a href="index.html"><img src="assets/img/sign.svg" alt="Nome do Site"></a></p>
-      <nav class="site-nav" aria-label="Navegação principal">
-        <ul>
-          <li><a href="index.html" aria-current="page">Início</a></li>
-          <li><a href="articles/index.html">Artigos</a></li>
-          <li><a href="links/index.html">Links</a></li>
-          <li><a href="portefolio/index.html">Portefólio</a></li>
-          <li><a href="reviews/index.html">Reviews</a></li>
-          <li><a href="about/index.html">Sobre</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      <style>
+          /* Remove margens padrão e garante altura total */
+          body, html {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              width: 100%;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              overflow: hidden; /* Evita scrolls desnecessários */
+          }
 
-  <main class="wrap">
+          /* O segredo do gradiente com inclinação e paragem brusca */
+          .background {
+              height: 100vh;
+              width: 100vw;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(
+                  65deg, 
+                  #ffffff 0%, 
+                  #ffffff 45%, 
+                  #000000 45%, 
+                  #000000 100%
+              );
+          }
 
-    <p class="lede">
-      Notas breves sobre as coisas que ando a explorar. Escrevo aqui de vez em quando — abaixo, os três artigos mais recentes.
-    </p>
+          /* Estilo da frase */
+          .text-container {
+              text-align: center;
+              z-index: 1;
+          }
 
-    <h2 class="eyebrow">Artigos recentes</h2>
+          h1 {
+              font-size: 3rem;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              /* Efeito de cor invertida: branco no fundo preto, preto no fundo branco */
+              /* background: linear-gradient(75deg, #000 35%, #fff 45%); */
+              color: rgb(129, 129, 129);
+              font-weight: 900;
+          }
 
-    <div class="recent-grid">
+          /* Responsividade para telemóveis */
+          @media (max-width: 600px) {
+              h1 { font-size: 1.5rem; }
+          }
+      </style>
+  </head>
+  <body>
 
-      <article class="recent-card">
-        <figure>
-          <a href="articles/article-1.html">
-            <img src="assets/img/thumb-1.svg" alt="" loading="lazy">
-          </a>
-        </figure>
-        <h2><a href="articles/article-1.html" class="ink-link">Título do primeiro artigo</a></h2>
-        <time datetime="2026-07-01">1 julho 2026</time>
-        <p>Um pequeno resumo do artigo, uma ou duas frases sobre o que se pode encontrar dentro dele.</p>
-      </article>
+      <div class="background">
+          <div class="text-container">
+              <h1>Website coming soon</h1>
+          </div>
+      </div>
 
-      <article class="recent-card">
-        <figure>
-          <a href="articles/article-2.html">
-            <img src="assets/img/thumb-2.svg" alt="" loading="lazy">
-          </a>
-        </figure>
-        <h2><a href="articles/article-2.html" class="ink-link">Título do segundo artigo</a></h2>
-        <time datetime="2026-06-14">14 junho 2026</time>
-        <p>Resumo curto que dá contexto suficiente sem revelar tudo o que está escrito no artigo.</p>
-      </article>
 
-      <article class="recent-card">
-        <figure>
-          <a href="articles/article-3.html">
-            <img src="assets/img/thumb-3.svg" alt="" loading="lazy">
-          </a>
-        </figure>
-        <h2><a href="articles/article-3.html" class="ink-link">Título do terceiro artigo</a></h2>
-        <time datetime="2026-05-22">22 maio 2026</time>
-        <p>Outro resumo breve, escrito para dar vontade de clicar e ler o artigo completo.</p>
-      </article>
-
-    </div>
-
-    <p class="see-all"><a href="articles/index.html" class="ink-link">Ver todos os artigos →</a></p>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>&copy; 2026 Francisco Valente.</p>
-    </div>
-  </footer>
+  <!-- JS externo -->
+  <!-- <script src="artigos.js"></script> -->
+  <script data-goatcounter="https://francisco2.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
+
+
+
